@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* 位置を固定するために relative を設定 */
+  z-index: 1; /* メニューより上に表示されるように z-index を設定 */
+}
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* ヘッダーの下にメニューが表示されるように設定 */
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  overflow: hidden;
+  height: 0; /* 初期状態では高さを0にする */
+  transition: height 0.3s ease-out; /* 高さのアニメーション */
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu ul li {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+/* メニューが表示されたときの状態 */
+.nav-menu.show {
+  height: auto; /* 自動で高さを設定する */
+  display: block;
+}
