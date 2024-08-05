@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページタイトル</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ヘッダーを読み込む -->
+    <div id="menu-icon"></div>
+
+    <!-- ページのメインコンテンツ -->
+    <div class="content">
+        <!-- ページごとの内容 -->
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // header.htmlを読み込む
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+</body>
+</html>
